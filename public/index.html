@@ -6,17 +6,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#000013">
   <meta name="apple-mobile-web-app-title" content="Weather Sensei">
-  <meta name="description" content="A simple weather app">
+  <meta name="description" content="A simple PWA weather app">
   <meta name="theme-color" content="#000013" />
   <title>Weather Sensei</title>
-  <link rel="manifest" href="/manifest.json">
-  <link rel="apple-touch-icon" href="/icons/icon_152x152.png">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <style type="text/css">*,body,html{box-sizing:border-box;margin:0;padding:0}html{font-size:10px;color:#333;font-family:Poppins,'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif;width:100vw;background-color:#000013}body{width:100vw;font-family:Montserrat,sans-serif}body{width:100vw;height:100vh}main{width:100%;height:100%;background-color:#000013;color:#dadada8c;padding:1em;font-size:1.3em;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start}#main-details{text-align:center}#search-section{display:flex;justify-content:center;align-items:center;height:30px;width:100%}#search-bar{padding:.5em .5em .5em 1em;border-radius:30px;background-color:transparent;color:#fff;outline:0;width:0;padding:0;border:none;transition:all .3s ease;z-index:100}#search-bar::placeholder{font-style:italic}#search-icon{padding:.5em;border-radius:90px;border:none;background-color:transparent;color:#fff;border:1px solid #727272b3;margin-left:.4em;cursor:pointer}#other-info-section{display:flex;width:100%;align-items:flex-start;justify-content:space-evenly}.other-info{display:flex;align-items:center;justify-content:center;flex-direction:column}.other-info span:nth-of-type(1){color:#fff;font-size:1.4em;margin:.3em}.other-info span:nth-of-type(2){font-size:1.2em;color:rgba(255,255,255,.768)}.section{width:100%}#weather-illustration-section{position:relative;font-size:4em;color:#fff;margin-bottom:.3em}#temp-loc-section>div{display:flex;justify-content:center;align-items:center}#temp-loc-section>div>p{display:flex;flex-direction:column;justify-content:space-between;font-size:2em;color:#a1a1a1b9}#temp-loc-section>div>p>span:nth-of-type(1){font-size:3em;line-height:.7}#temp{font-size:8em;color:#fff;line-height:1.3;font-family:Poppins,sans-serif}#location{color:#ffffffac;letter-spacing:.6em;margin-left:1em;font-family:Poppins,sans-serif}#weather-condition{margin-bottom:2em;margin-top:-1em;color:rgba(218,218,218,.741)}svg{height:4em;width:100%;z-index:5}#dust,#haze,#mostly-sunny{filter:drop-shadow(0 0 30px rgb(255, 166, 0))}#partly-cloudy{filter:drop-shadow(5px -5px 10px rgba(255, 166, 0, .51))}#tornado{height:3em}#breezy,#no-icon{height:2em}.fa,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-search:before{content:"\f002"}.fa-eye:before{content:"\f06e"}.fa-wind:before{content:"\f72e"}.fa-water:before{content:"\f773"}.fa-tachometer-alt:before{content:"\f3fd"}.fa,.fas{font-family:'Font Awesome 5 Free';font-weight:900}</style>
-  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icons/icon_152x152.png">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <style type="text/css">*,body,html{box-sizing:border-box;margin:0;padding:0}html{font-size:10px;color:#333;font-family:"Poppins",'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif;width:100vw;background-color:#000013;overflow-x:hidden}body{width:100vw;font-family:"Montserrat",sans-serif}body{width:100vw;height:100vh;overflow-x:hidden;position:relative}main{position:relative;width:100%;height:100%;background-color:#000013;color:#dadada8c;padding:1em;font-size:1.3em;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start}#main-details{text-align:center}#search-section{display:flex;justify-content:center;align-items:center;height:30px;width:100%}#search-bar{padding:.5em .5em .5em 1em;border-radius:30px;background-color:transparent;color:#fff;outline:0;width:0;padding:0;border:none;transition:all .3s ease;z-index:100}#search-bar::placeholder{font-style:italic}#search-icon{padding:.5em;border-radius:90px;border:none;background-color:transparent;color:#fff;border:1px solid #727272b3;margin-left:.4em;cursor:pointer}#other-info-section{display:flex;width:100%;align-items:flex-start;justify-content:space-evenly}.other-info{display:flex;align-items:center;justify-content:center;flex-direction:column}.other-info span:nth-of-type(1){color:#fff;font-size:1.4em;margin:.3em}.other-info span:nth-of-type(2){font-size:1.2em;color:rgba(255,255,255,.768)}.section{width:100%}#weather-illustration-section{position:relative;font-size:4em;color:#fff;margin-bottom:.3em}#temp-loc-section>div{display:flex;justify-content:center;align-items:center}#temp-loc-section>div>p{display:flex;flex-direction:column;justify-content:space-between;font-size:2em;color:#a1a1a1b9}#temp-loc-section>div>p>span:nth-of-type(1){font-size:3em;line-height:.7}#temp{font-size:8em;color:#fff;line-height:1.3;font-family:Poppins,sans-serif}#location{color:#ffffffac;letter-spacing:.6em;margin-left:1em;font-family:Poppins,sans-serif}#weather-condition{margin-bottom:2em;margin-top:-1em;color:rgba(218,218,218,.741)}#current-date{margin-top:1em}svg{height:4em;width:100%;z-index:5}#dust,#haze,#mostly-sunny{filter:drop-shadow(0 0 30px rgb(255, 166, 0))}#partly-cloudy{filter:drop-shadow(5px -5px 10px rgba(255, 166, 0, .51))}#tornado{height:3em}#breezy,#no-icon{height:2em}.fa,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-search:before{content:"\f002"}.fa-eye:before{content:"\f06e"}.fa-wind:before{content:"\f72e"}.fa-water:before{content:"\f773"}.fa-tachometer-alt:before{content:"\f3fd"}.fa,.fas{font-family:'Font Awesome 5 Free';font-weight:900}#no-network-modal,#loader-modal{ z-index:1300;position: absolute; height: 100vh;width: 100vw;top: 0;left: 101vw;text-align: center;display: flex;align-items: center;justify-content: center;flex-direction: column; background-color: #000013;padding: 2em;transition: left 0.3s linear;}#no-network-modal .no-network-icon{font-size:8em;color: #ff000072;margin-bottom: 0.5em;}#no-network-modal #close-modal-btn{background-color: #ff000072;padding: 1em 1.3em;border-radius: 50%;font-size: 1.2em;color: #fff;position: absolute;top: 1em;left: 1em;cursor:pointer;}#no-network-modal p:nth-of-type(1){color: #ff0000ec;font-weight: bold;font-size: 1.6em;}#no-network-modal p:nth-of-type(2){font-size: 1.2em;margin-top: 1em;line-height: 1.5;color:rgba(255, 255, 255, 0.824)}#loader-modal{left: 0;background-color: #000013ea;z-index: 1200;display: none;}#outer-circle{height:0;width: 0;border-radius: 50%;border:3px solid #fff;display: flex;justify-content: center;  align-items: center;animation: pulse1 2s ease alternate-reverse infinite;}#inner-circle{height:0;width: 0;border-radius: 50%;border:1px solid #fff;animation: pulse2 3s ease reverse infinite;position: absolute;}@keyframes pulse1 {50%{height: 100px;width:100px;}}@keyframes pulse2 {20%{height: 120px;width:120px;}}</style>
+  <link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="/css/style.css"></noscript>
+    <link rel="stylesheet" href="./css/style.css"></noscript>
 </head>
 
 <body>
@@ -473,7 +473,7 @@
         </svg>
 
         <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="0.0958661in" height="0.0958465in"
-          style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd;display:none"
+          style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd;display:none;"
           viewBox="0 0 0.00449141 0.00449049" xmlns:xlink="http://www.w3.org/1999/xlink" id="mostly-sunny">
           <defs>
             <linearGradient id="clear-sun" gradientUnits="userSpaceOnUse" x1="0.00129449" y1="0.0037027" x2="0.00319674"
@@ -975,35 +975,51 @@
       </section>
       <section class="section" id="temp-loc-section">
         <div>
-          <h1 id="temp">23</h1>
+          <h1 id="temp">0</h1>
           <p><span>&deg;</span><span>c</span></p>
         </div>
-        <p id="weather-condition">SUNNY</p>
-        <p id="location">NEW YORK, US</p>
-        <p id="current-date">Sun Sep 06 2020</p>
+        <p id="weather-condition"></p>
+        <p id="location"></p>
+        <p id="current-date"></p>
       </section>
     </section>
-
+  <!-- WEATHER INFO SECTION STARTS -->
     <section class="section" id="other-info-section">
       <div class="other-info"> <span class="fas fa-tachometer-alt"></span>
-        <span id="pressure">1032hPa</span>
+        <span id="pressure">-</span>
         <span>pressure</span>
       </div>
       <div class="other-info"><span class="fas fa-eye"></span>
-        <span id="visibility">2km</span>
+        <span id="visibility">-</span>
         <span>visibility</span>
       </div>
       <div class="other-info"><span class="fa fa-water"></span>
-        <span id="humidity">30%</span>
+        <span id="humidity">-</span>
         <span>humidity</span>
       </div>
       <div class="other-info"><span class="fa fa-wind"></span>
-        <span id="wind-speed">2.4m/s</span>
+        <span id="wind-speed">-</span>
         <span>wind</span>
       </div>
     </section>
+      <!-- WEATHER INFO SECTION ENDS -->
+ 
   </main>
+  <section id="loader-modal">
+    <div id="outer-circle"></div>
+<div id="inner-circle"></div>
+  </section>
 
+       <!-- NETWORK ERROR MODAL -->
+       <section>
+        <div id="no-network-modal">
+          <span id="close-modal-btn">X</span>
+          <span class="fa fa-search no-network-icon"></span>
+          <p>Network Error</p>
+          <p>Couldn't get weather information due to poor or no network connection</p>
+        </div>
+      </section>
+<!-- NETWORK ERROR MODAL ENDS HERE -->
   <script type="module">
     window.addEventListener('load', () => {
       //register service worker
