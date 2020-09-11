@@ -5,24 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#000013">
-  <meta name="apple-mobile-web-app-title" content="Weather Sensei">
+  <meta name="apple-mobile-web-app-title" content="Smash-it Weather Guide">
   <meta name="description" content="A simple PWA weather app">
   <meta name="theme-color" content="#000013" />
-  <title>Weather Sensei</title>
-  <link rel="manifest" href="./manifest.json">
+  <title>Smash It Weather Guide</title>
+  <link rel="manifest" href="/manifest.json">
   <link rel="apple-touch-icon" href="./icons/icon_152x152.png">
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <style type="text/css">*,body,html{box-sizing:border-box;margin:0;padding:0}html{font-size:10px;color:#333;font-family:"Poppins",'Lucida Sans','Lucida Sans Regular','Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,sans-serif;width:100vw;background-color:#000013;overflow-x:hidden}body{width:100vw;font-family:"Montserrat",sans-serif}body{width:100vw;height:100vh;overflow-x:hidden;position:relative}main{position:relative;width:100%;height:100%;background-color:#000013;color:#dadada8c;padding:1em;font-size:1.3em;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start}#main-details{text-align:center}#search-section{display:flex;justify-content:center;align-items:center;height:30px;width:100%}#search-bar{padding:.5em .5em .5em 1em;border-radius:30px;background-color:transparent;color:#fff;outline:0;width:0;padding:0;border:none;transition:all .3s ease;z-index:100}#search-bar::placeholder{font-style:italic}#search-icon{padding:.5em;border-radius:90px;border:none;background-color:transparent;color:#fff;border:1px solid #727272b3;margin-left:.4em;cursor:pointer}#other-info-section{display:flex;width:100%;align-items:flex-start;justify-content:space-evenly}.other-info{display:flex;align-items:center;justify-content:center;flex-direction:column}.other-info span:nth-of-type(1){color:#fff;font-size:1.4em;margin:.3em}.other-info span:nth-of-type(2){font-size:1.2em;color:rgba(255,255,255,.768)}.section{width:100%}#weather-illustration-section{position:relative;font-size:4em;color:#fff;margin-bottom:.3em}#temp-loc-section>div{display:flex;justify-content:center;align-items:center}#temp-loc-section>div>p{display:flex;flex-direction:column;justify-content:space-between;font-size:2em;color:#a1a1a1b9}#temp-loc-section>div>p>span:nth-of-type(1){font-size:3em;line-height:.7}#temp{font-size:8em;color:#fff;line-height:1.3;font-family:Poppins,sans-serif}#location{color:#ffffffac;letter-spacing:.6em;margin-left:1em;font-family:Poppins,sans-serif}#weather-condition{margin-bottom:2em;margin-top:-1em;color:rgba(218,218,218,.741)}#current-date{margin-top:1em}svg{height:4em;width:100%;z-index:5}#dust,#haze,#mostly-sunny{filter:drop-shadow(0 0 30px rgb(255, 166, 0))}#partly-cloudy{filter:drop-shadow(5px -5px 10px rgba(255, 166, 0, .51))}#tornado{height:3em}#breezy,#no-icon{height:2em}.fa,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-search:before{content:"\f002"}.fa-eye:before{content:"\f06e"}.fa-wind:before{content:"\f72e"}.fa-water:before{content:"\f773"}.fa-tachometer-alt:before{content:"\f3fd"}.fa,.fas{font-family:'Font Awesome 5 Free';font-weight:900}#no-network-modal,#loader-modal{ z-index:1300;position: absolute; height: 100vh;width: 100vw;top: 0;left: 101vw;text-align: center;display: flex;align-items: center;justify-content: center;flex-direction: column; background-color: #000013;padding: 2em;transition: left 0.3s linear;}#no-network-modal .no-network-icon{font-size:8em;color: #ff000072;margin-bottom: 0.5em;}#no-network-modal #close-modal-btn{background-color: #ff000072;padding: 1em 1.3em;border-radius: 50%;font-size: 1.2em;color: #fff;position: absolute;top: 1em;left: 1em;cursor:pointer;}#no-network-modal p:nth-of-type(1){color: #ff0000ec;font-weight: bold;font-size: 1.6em;}#no-network-modal p:nth-of-type(2){font-size: 1.2em;margin-top: 1em;line-height: 1.5;color:rgba(255, 255, 255, 0.824)}#loader-modal{left: 0;background-color: #000013ea;z-index: 1200;display: none;}#outer-circle{height:0;width: 0;border-radius: 50%;border:3px solid #fff;display: flex;justify-content: center;  align-items: center;animation: pulse1 2s ease alternate-reverse infinite;}#inner-circle{height:0;width: 0;border-radius: 50%;border:1px solid #fff;animation: pulse2 3s ease reverse infinite;position: absolute;}@keyframes pulse1 {50%{height: 100px;width:100px;}}@keyframes pulse2 {20%{height: 120px;width:120px;}}</style>
-  <link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="./css/style.css"></noscript>
+    <link rel="stylesheet" href="/css/style.css"></noscript>
 </head>
-
+<style>
+  .sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto} @font-face {font-family: 'Font Awesome 5 Free';font-style: normal;font-weight: 900;font-display: block;src: url("./webfonts/fa-solid-900.eot");src: url("./webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-solid-900.woff2") format("woff2"), url("./webfonts/fa-solid-900.woff") format("woff"), url("./webfonts/fa-solid-900.ttf") format("truetype"), url("./webfonts/fa-solid-900.svg#fontawesome") format("svg");}
+</style>
 <body>
   <main class="main">
     <section class="section" id="search-section">
-      <input type="search" id="search-bar" placeholder="Enter name of city" aria-label="Enter name of city"><i
+      <input type="search" id="search-bar" placeholder="Enter name of city or city,county Code" aria-label="Enter name of city"><i
         aria-label="search" class="fa fa-search" id="search-icon"></i>
     </section>
     <section class="section" id="main-details">
@@ -1014,12 +1016,13 @@
        <section>
         <div id="no-network-modal">
           <span id="close-modal-btn">X</span>
-          <span class="fa fa-search no-network-icon"></span>
+          <span class="fa fa-exclamation-triangle no-network-icon"></span>
           <p>Network Error</p>
           <p>Couldn't get weather information due to poor or no network connection</p>
         </div>
       </section>
 <!-- NETWORK ERROR MODAL ENDS HERE -->
+
   <script type="module">
     window.addEventListener('load', () => {
       //register service worker
@@ -1034,14 +1037,14 @@
 
   
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<!-- <script src="/__/firebase/7.19.1/firebase-app.js"></script> -->
+<script src="/__/firebase/7.19.1/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<!-- <script src="/__/firebase/7.19.1/firebase-analytics.js"></script> -->
+<script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
 
 <!-- Initialize Firebase -->
-<!-- <script src="/__/firebase/init.js"></script> -->
+<script src="/__/firebase/init.js"></script>
   <script async type="module" src="./requestAPI.js"></script>
   <script defer type="module" src="./main.js"></script>
 </body>

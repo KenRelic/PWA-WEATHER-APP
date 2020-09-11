@@ -1,6 +1,6 @@
 {
-  "name": "Weather Sensei",
-  "short_name": "Weather Sensei",
+  "name": "Smash-it Weather Guide",
+  "short_name": "Weather Guide",
   "icons": [{
     "src": "./icons/icon_128x128.png",
       "sizes": "128x128",

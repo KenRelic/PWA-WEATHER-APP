@@ -1,28 +1,24 @@
 
 const cacheName = 'cache-v1';
   const filesToCache = [
-    '/',
     '/index.html',
     '/favicon.ico',
     '/manifest.json',
     '/robots.txt',
-    '/icons/',
     '/icons/icon_128x128.png',
     '/icons/icon_144x144.png',
     '/icons/icon_152x152.png',
     '/icons/icon_192x192.png',
     '/icons/icon_256x256.png',
     '/icons/icon_512X512.png',
-    '/css/',
-    '/css/style',
-    '/webfonts/',
+    '/css/style.css',
     '/webfonts/fa-solid-900.eot',
     '/webfonts/fa-solid-900.svg',
     '/webfonts/fa-solid-900.ttf',
     '/webfonts/fa-solid-900.woff',
     '/webfonts/fa-solid-900.woff2',
     '/main.js',
-    '/requestAPI.js',    
+    '/requestAPI.js'
   ];
 
 
@@ -44,6 +40,7 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
     .then(response => {
+      console.log(response)
       return response || fetch(event.request);
     })
     .catch(error => {
