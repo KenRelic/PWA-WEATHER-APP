@@ -18,7 +18,7 @@ async function fetchWeatherData(loc) {
   if (navigator.onLine) {
     try {
       let location = loc || 'new york';
-      weatherData = await (await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=1500cd5e25510340226c26e15c6f062c`)).json();
+      weatherData = await (await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=API_KEY`)).json();
 
       weatherData.cod === 200 ? localStorage.setItem("weatherData", JSON.stringify(weatherData)) : '';
       return weatherData;
